@@ -2,11 +2,13 @@ from flask import Flask, request, jsonify
 import stripe
 import os
 from dotenv import load_dotenv
-from common import send_email_to_user, load_user_map
+from common import send_email_to_user, load_user_map, get_db_connection
 from telegram import Bot
 
 
 load_dotenv()
+
+get_db_connection()
 
 # Define constants
 stripe.api_key = os.getenv("STRIPE_API_KEY")
