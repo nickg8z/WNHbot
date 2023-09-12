@@ -22,7 +22,6 @@ update_queue = asyncio.Queue()
 updater = Updater(bot, update_queue)
 
 
-# Store a map of Stripe customer ID to Telegram ID
 # Store a map of Stripe customer ID to Telegram ID in a text file
 user_map_file = "user_map.txt"
 
